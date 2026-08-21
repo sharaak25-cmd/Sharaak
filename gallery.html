@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="images/logo.png" type="image/png">
+<meta charset="UTF-8">
+<meta property="og:title" content="Gallery | Sharaak-a-tat Tattoo Studio">
+<meta property="og:description" content="Recent blackwork, fine line, floral and custom tattoo work created at Sharaak-a-tat.">
+<meta property="og:image" content="https://sharaak.co.uk/images/logo.png">
+<meta property="og:url" content="https://sharaak.co.uk/gallery.html">
+<meta property="og:site_name" content="Sharaak-a-tat Tattoo Studio">
+<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Sharaak-a-tat Tattoo Studio</title>
+<meta name="description" content="A selection of blackwork, fine line, floral and custom tattoo pieces created at Sharaak-a-tat, showing recent work across different styles and ideas.">
+<link rel="canonical" href="https://sharaak.co.uk/gallery.html">
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(to bottom,#000,#09090b,#18181b);color:#f4f4f5;overflow-x:hidden}
+header{position:sticky;top:0;background:rgba(0,0,0,.88);padding:16px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(113,113,122,.25);z-index:10;backdrop-filter:blur(12px)}
+header img{height:64px}
+nav a{color:#e4e4e7;text-decoration:none;margin-left:24px;font-size:.95rem;transition:.25s}
+nav a:hover{color:#fff}
+main{max-width:1300px;margin:auto;padding:40px 24px}
+.hero{text-align:center;padding:50px 0 25px}
+.hero h1{font-size:3.2rem;margin-bottom:16px;letter-spacing:-.03em}
+.hero p{max-width:760px;margin:auto;color:#d4d4d8;line-height:1.7}
+.filters{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:34px 0}
+.filters span{padding:10px 18px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#d4d4d8;font-size:.9rem;cursor:pointer;transition:.25s;background:rgba(255,255,255,.03)}
+.filters span:hover{background:#fff;color:#000;transform:translateY(-2px)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:#09090b;border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden;box-shadow:0 18px 36px rgba(0,0,0,.45);transition:.35s ease;cursor:pointer}
+.card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 24px 50px rgba(0,0,0,.65)}
+.card img{width:100%;height:360px;object-fit:cover;display:block;transition:.35s}
+.card:hover img{transform:scale(1.05)}
+.card .info{padding:18px}
+.card h3{margin:0 0 8px;font-size:1.05rem}
+.card p{margin:0;color:#a1a1aa;font-size:.92rem;line-height:1.5}
+.cta{margin:70px auto 30px;max-width:850px;text-align:center;background:linear-gradient(to right,#27272a,#18181b,#000);padding:55px 24px;border-radius:28px;box-shadow:0 18px 50px rgba(0,0,0,.5)}
+.button{display:inline-block;margin-top:20px;background:#e4e4e7;color:black;padding:14px 28px;border-radius:16px;text-decoration:none;font-weight:bold;transition:.25s}
+.button:hover{transform:translateY(-2px)}
+#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.94);justify-content:center;align-items:center;z-index:1000;cursor:pointer;animation:fade .25s ease}
+#lightbox img{max-width:90%;max-height:88%;border-radius:24px;box-shadow:0 24px 70px rgba(0,0,0,.9);animation:zoom .25s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes zoom{from{transform:scale(.92)}to{transform:scale(1)}}
+@media(max-width:768px){header{padding:16px 20px;flex-direction:column;gap:10px}.hero h1{font-size:2.2rem}}
+</style>
+</head>
+<body>
+<header>
+<img src="images/logo.png" alt="Sharaak-a-tat Tattoo Studio logo">
+<nav>
+<a href="index.html">Home</a>
+<a href="https://www.instagram.com/sharaakatat/">Gallery</a>
+<a href="https://venue.ink/sh4r44k">Booking</a>
+</nav>
+</header>
+<main>
+<section class="hero">
+<h1>Recent work and custom pieces</h1>
+<p>Explore recent blackwork, fine line, floral and custom pieces, each developed around individual ideas, placement and style.</p>
+</section>
+<div class="filters">
+<span onclick="filterSelection('all')">All</span>
+<span onclick="filterSelection('blackwork')">Blackwork</span>
+<span onclick="filterSelection('fineline')">Fine Line</span>
+<span onclick="filterSelection('floral')">Floral</span>
+<span onclick="filterSelection('custom')">Custom Pieces</span>
+</div>
+<section class="gallery">
+<div class="card blackwork" onclick="openLightbox(this)"><img src="images/tattoo1.jpg" loading="lazy" alt="Blackwork tattoo detail"><div class="info"><h3>Blackwork Design</h3><p>Bold contrast work designed for lasting clarity and detail.</p></div></div>
+	
+<div class="card blackwork" onclick="openLightbox(this)"><img src="images/TinkerCoverup.jpg" loading="lazy" alt="Blackwork Tinkerbell Coverup"><div class="info"><h3>Blackwork Tinkerbell</h3><p>Bold silhouette to give a statement</p></div></div>	
+	
+	<div class="card fineline" onclick="openLightbox(this)"><img src="images/Hbutterfly.jpg" loading="lazy" alt="H and a butterfly"><div class="info"><h3>Memorable Fineline</h3><p>Heartwarming tattoo to go with a beautiful story</p></div></div>
+	
+	<div class="card floral" onclick="openLightbox(this)"><img src="images/flowersARH.jpg" loading="lazy" alt="ARH Initials surrounded by flowers"><div class="info"><h3>Floral decorative initials</h3><p>Initials with meaning</p></div></div>
+	
+<div class="card floral" onclick="openLightbox(this)"><img src="images/tattoo2.jpg" loading="lazy" alt="Floral tattoo linework"><div class="info"><h3>Floral Concept</h3><p>Soft linework and natural movement tailored to placement.</p></div></div>
+<div class="card fineline" onclick="openLightbox(this)"><img src="images/tattoo3.jpg" loading="lazy" alt="Mini skeleton tattoo detail"><div class="info"><h3>Character Mini</h3><p>Small-scale work where clean detail carries the character.</p></div></div>
+<div class="card custom" onclick="openLightbox(this)"><img src="images/tattoo4.jpg" loading="lazy" alt="Mini dragon tattoo detail"><div class="info"><h3>Dragon Piece</h3><p>Fantasy-inspired work shaped around personal references and placement.</p></div></div>
+<div class="card custom" onclick="openLightbox(this)"><img src="images/tattoo5.jpg" loading="lazy" alt="Mermaid colour tattoo"><div class="info"><h3>Colour Detail</h3><p>Selective colour used to enhance focal points.</p></div></div>
+<div class="card fineline" onclick="openLightbox(this)"><img src="images/tattoo9.jpg" loading="lazy" alt="Mini mushroom linework"><div class="info"><h3>Mini Tattoo</h3><p>Fine line detail suited to smaller ideas and quieter pieces.</p></div></div>
+</section>
+	
+	<p style="text-align:center;">Custom appointments are shaped around the idea, placement and pace of each piece, whether the work is delicate, bold or something entirely individual.</p>
+	
+<section class="cta">
+<h2>Ready to plan your next tattoo?</h2>
+<p>Bookings are available by appointment from a private studio in South Wales.</p>
+<a class="button" href="https://venue.ink/sh4r44k">Book Tattoo Appointment</a>
+</section>
+</main>
+<div id="lightbox" onclick="closeLightbox()">
+<button id="prevBtn" onclick="event.stopPropagation();changeImage(-1)" style="position:absolute;left:30px;font-size:2rem;background:none;border:none;color:white;cursor:pointer;z-index:1001;">❮</button>
+<img id="lightbox-img" src="">
+<button id="nextBtn" onclick="event.stopPropagation();changeImage(1)" style="position:absolute;right:30px;font-size:2rem;background:none;border:none;color:white;cursor:pointer;z-index:1001;">❯</button>
+</div>
+<script>
+let currentIndex=0; const cards=[...document.querySelectorAll('.card img')];
+function openLightbox(card){const img=card.querySelector('img');currentIndex=cards.indexOf(img);document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').style.display='flex';}
+function closeLightbox(){document.getElementById('lightbox').style.display='none';}
+function changeImage(direction){currentIndex=(currentIndex+direction+cards.length)%cards.length;document.getElementById('lightbox-img').src=cards[currentIndex].src;}
+function filterSelection(category){const cards=document.querySelectorAll('.card');cards.forEach(card=>{if(category==='all'||card.classList.contains(category)){card.style.display='block';}else{card.style.display='none';}})}
+</script>
+</body>
+</html>

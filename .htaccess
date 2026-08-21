@@ -1,0 +1,14 @@
+SetEnvIfNoCase User-Agent .ChatGPT-User. !bad_bot
+SetEnvIfNoCase User-Agent .*GPTBot.* !bad_bot
+AddType application/xml .xml
+
+<Files "sitemap.xml">
+Require all granted
+
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+</IfModule>
