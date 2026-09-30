@@ -24,7 +24,13 @@ const sheets=[{"title": "Dinosaur Patchwork<p>£40 each or 2  for £60 </p>", "s
 			 ];const grid=document.querySelector('#grid'),dialog=document.querySelector('dialog'),viewer=document.querySelector('#viewer');let current=0;
 function sheet(s,i){return `<div class="sheet"><img src="${s.src}" alt="${s.title} A4 flash sheet"></div>`}
 sheets.forEach((s,i)=>{let card=document.createElement('article');card.className='card';card.innerHTML=`<button class="sheet-button" aria-label="Enlarge sheet ${i+1}: ${s.title}">${sheet(s,i)}</button><div class="caption"><small>SHEET ${String(i+1).padStart(2,'0')}</small><h2>${s.title}</h2><p>Click to view larger</p></div>`;card.querySelector('button').onclick=()=>{current=i;render();dialog.showModal()};grid.append(card)});
-for(let i=2;i<=3;i++){let placeholder=document.createElement('article');placeholder.className='card placeholder';placeholder.innerHTML=`<div class="empty"><span>0${i}</span><strong>Your next flash sheet</strong><p>Space for more of your designs</p></div><div class="caption"><small>SHEET 0${i}</small><h2>More flash coming soon</h2><p>Placeholder for this preview</p></div>`;grid.append(placeholder)}
+
+		/*
+		
+		for(let i=2;i<=3;i++){let placeholder=document.createElement('article');placeholder.className='card placeholder';placeholder.innerHTML=`<div class="empty"><span>0${i}</span><strong>Your next flash sheet</strong><p>Space for more of your designs</p></div><div class="caption"><small>SHEET 0${i}</small><h2>More flash coming soon</h2><p>Placeholder for this preview</p></div>`;grid.append(placeholder)}
+		
+		*/
+		
 function render(){viewer.classList.remove('zoomed');document.querySelector('#zoom').textContent='Zoom in';viewer.innerHTML=sheet(sheets[current],current);document.querySelector('#viewTitle').textContent=`Sheet ${String(current+1).padStart(2,'0')} · ${sheets[current].title}`;viewer.scrollTop=0;viewer.scrollLeft=0}
 document.querySelector('#close').onclick=()=>dialog.close();document.querySelector('#zoom').onclick=()=>{let z=viewer.classList.toggle('zoomed');document.querySelector('#zoom').textContent=z?'Fit sheet':'Zoom in'};document.querySelector('#prev').onclick=()=>{current=(current+sheets.length-1)%sheets.length;render()};document.querySelector('#next').onclick=()=>{current=(current+1)%sheets.length;render()};dialog.onclick=e=>{if(e.target===dialog)dialog.close()};document.addEventListener('keydown',e=>{if(dialog.open&&e.key==='ArrowRight')document.querySelector('#next').click();if(dialog.open&&e.key==='ArrowLeft')document.querySelector('#prev').click()});
 </script></html>
